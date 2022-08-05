@@ -1,6 +1,17 @@
-Programas (e apresentação) do desafio de otimização do Bootcamp ENACOM 2022!
+----------------------------------
+RESULTADO DA INSTÂNCIA DO DESAFIO:
 
-Se você está aqui pelos resultados do probleminha do desafio, os resultados estão em RESULT_FOR_PRESENTATION.png.
+Investmentos escolhidos:
+Ampliar armazem MGL em 7%
+Projeto de P&D I
+Aquisição de novos equipamentos
+Capacitação de funcionários
+Retorno total:  990000
+Custo total:  950000
+----------------------------------
+
+
+Programas (e apresentação) do desafio de otimização do Bootcamp ENACOM 2022!
 
 O programa está em investment.py, contendo comentários explicativos do que foi feito.
 
