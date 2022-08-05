@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n > EXP_RESULTS
+echo -n > EXP_RESULTS_$1_$2
 for i in $(seq $1 $2)
 do
 	sum=0
@@ -17,5 +17,6 @@ do
 		sum=$((sum+tempo))
 	done
 	# Experiment results for the current size
-	echo $i $((sum/10)) >> EXP_RESULTS
+	echo $i $((sum/10)) >> EXP_RESULTS_$1_$2
 done
+echo "Experiments concluded."
