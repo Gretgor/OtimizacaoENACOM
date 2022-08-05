@@ -10,10 +10,13 @@ Retorno total:  990000
 Custo total:  950000
 ----------------------------------
 
-
 Programas (e apresentação) do desafio de otimização do Bootcamp ENACOM 2022!
 
 O programa está em investment.py, contendo comentários explicativos do que foi feito.
 
 O código fonte da apresentação está em apres_ENACOM.tex, e a apresentação em PDF está em apres_ENACOM.pdf.
+
+Para o código do gerador de instâncias, cheque generate_instance.py.
+
+Para o código usado para rodar os experimentos, cheque experiment.sh
 
