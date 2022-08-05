@@ -30,7 +30,7 @@ class InvestmentProblem(BuilderOptimizationProblem):
 		self.__budget = budget
 		self.__conflicts = conflicts
 		self.__dependencies = dependencies
-		print(self.__conflicts,self.__dependencies)
+		#print(self.__conflicts,self.__dependencies)
 		
 	# building variables: pretty much the same thing we saw in the
 	# second class.
