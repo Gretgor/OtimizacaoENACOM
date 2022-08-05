@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -n > EXP_RESULTS
-for i in $(seq 1 2000)
+for i in $(seq $1 $2)
 do
 	sum=0
 	echo "Initianting test instances of size $i"
