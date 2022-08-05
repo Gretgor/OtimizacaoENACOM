@@ -13,6 +13,34 @@ dependency_size = random.randint(0,int(instance_size/2))
 
 # budget is set to a random number between 30 and 1000:
 budget = random.randint(30,1000)
-print(budget,dependency_size,conflict_size)
+print(instance_size)
+print(budget)
+
+# print costs (between 1 and 600)
+for i in range(0,instance_size):
+	print(random.randint(1,600))
+
+# print returns (between 1 and 800)	
+for i in range(0,instance_size):
+	print(random.randint(1,800))
+
+# name generation (just having fun with this one)
+for i in range(0,instance_size):
+	part1 = random.choice(["Atualização","Aprimoramento","Expansão","Capacitação","Compra","Criação","Reforma","Refatoração","Venda","Anúncio"])
+	part2 = random.choice([" de pessoal"," de armazém"," de portfolio"," de equipamento"," de máquina"," dos relatórios"," de funcionários"])
+	part3 = random.choice([" para atividade fim"," para limpeza"," em relações públicas"," em 10%"," de segurança"," de desenvolvimento"," de suporte"])
+	print(str(i+1)+": "+part1+part2+part3)
+	
+# conflicts and dependencies: for every one of those, just print two random indices
+print(conflict_size)
+for i in range(0,conflict_size):
+	print(random.randint(0,instance_size-1))
+	print(random.randint(0,instance_size-1))
+	
+print(dependency_size)
+for i in range(0,dependency_size):
+	print(random.randint(0,instance_size-1))
+	print(random.randint(0,instance_size-1))
+
 
 
