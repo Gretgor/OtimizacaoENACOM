@@ -11,8 +11,8 @@ conflict_size = random.randint(0,int(instance_size/2))
 # there will be at most n/2 dependencies in these test cases
 dependency_size = random.randint(0,int(instance_size/2))
 
-# budget is set to a random number between 30 and 1000:
-budget = random.randint(30,1000)
+# budget is set to a random number between 30 and 1000*int(instance_size/8):
+budget = random.randint(30,1000*int(instance_size/8))
 print(instance_size)
 print(budget)
 
