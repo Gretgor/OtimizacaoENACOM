@@ -255,7 +255,15 @@ Para estudar o desempenho do programa mais a fundo, foi criado um
 \emph{gerador de instâncias}.\pause
 
 Para cada número de investimentos entre 1 e 4078, dez instâncias foram geradas,
-e o tempo de execução médio do programa foi medido para cada uma.
+e o tempo de execução médio do programa foi medido para cada uma.\pause
+
+Máquina usada:\pause
+\begin{itemize}
+\item Processador \emph{AMD FX-8350 Eight-core} (4 GHz).\pause
+\item 8 GB de memória RAM \emph{DDR 3}.\pause
+\item Rodando uma máquina virtual de \emph{Linux Mint} usando \emph{OracleVM VirtualBox} 
+em \emph{Windows 7} de 64 bits.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Resultados}
@@ -265,6 +273,25 @@ e o tempo de execução médio do programa foi medido para cada uma.
 \begin{itemize}
 \item Eixo $x$ : tempo em milisegundos.
 \item Eixo $y$ : número de opções.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados}
+\begin{itemize}
+\item O aumento do tempo levado em função do tamanho da instância é acima de linear (como esperado, pois o problema é exponencial no pior caso).\pause
+\item Além disso, quanto maiores os tamanhos de instância, mais ``espalhados'' os tempos de execução ficaram.\pause
+\begin{itemize}
+\item Hipótese 1: quanto maior o número de opções, maior o impacto do número de restrições sobre o tempo de execução (isso pode ser testado fixando o número de restrições).\pause
+\item Hipótese 2: o número de testes por tamanho de instância (10) pode ter sido insuficiente para determinar uma média consistente para os tempos de execução 
+(isso pode ser testado aumentando o número de instâncias para cada tamanho).\pause
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados}
+\begin{itemize}
+\item De qualquer forma, mesmo nos casos com mais de 4000 opções, o programa demorou menos de 15 segundos, em média, para encontrar a solução ótima. \pause
+\item Isso se deve, principalmente, às otimizações existentes no pacote \emph{science-optimization} e no algoritmo \emph{Glop}.
 \end{itemize}
 \end{frame}
 
