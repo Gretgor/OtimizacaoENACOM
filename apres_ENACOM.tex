@@ -116,7 +116,7 @@ $v_a+v_b \le 1$
 Restrições de dependência, para todo $1 \le a,b \le n$ tal que $I_a$ depende de $I_b$:
 \begin{center}
 $v_b+(1-v_a) \ge 1$
-\end{center}
+\end{center}\pause
 Domínio das variáveis de decisão:
 \begin{center}
 $\forall 1 \le i \le n, v_i \in \{0,1\}$.
@@ -271,8 +271,8 @@ em \emph{Windows 7} de 64 bits.
 \includegraphics[scale=0.3]{GRAPH_FOR_PRESENTATION.png}
 \end{center}
 \begin{itemize}
-\item Eixo $x$ : tempo em milisegundos.
-\item Eixo $y$ : número de opções.
+\item Eixo $y$ : tempo em milisegundos.
+\item Eixo $x$ : número de opções.
 \end{itemize}
 \end{frame}
 
@@ -282,9 +282,7 @@ em \emph{Windows 7} de 64 bits.
 \item Além disso, quanto maiores os tamanhos de instância, mais ``espalhados'' os tempos de execução ficaram.\pause
 \begin{itemize}
 \item Hipótese 1: quanto maior o número de opções, maior o impacto do número de restrições sobre o tempo de execução (isso pode ser testado fixando o número de restrições).\pause
-\item Hipótese 2: o número de testes por tamanho de instância (10) pode ter sido insuficiente para determinar uma média consistente para os tempos de execução 
-(isso pode ser testado aumentando o número de instâncias para cada tamanho).\pause
-\item Hipótese 3: devido à forma como preços e retornos foram atribuídos de forma aleatória a cada opção no gerador de instâncias, existe a possibilidade de que certas instâncias tenham contido
+\item Hipótese 2: devido à forma como preços e retornos foram atribuídos de forma aleatória a cada opção no gerador de instâncias, existe a possibilidade de que certas instâncias tenham contido
 opções ``super-poderosas'' de baixo custo e alto retorno, que grandemente simplificaram o trabalho do algoritmo de otimização (isso pode ser testado calculando os retornos das opções em função de seus custos).
 \end{itemize}
 \end{itemize}
@@ -295,6 +293,12 @@ opções ``super-poderosas'' de baixo custo e alto retorno, que grandemente simp
 \item De qualquer forma, mesmo nos casos com mais de 4000 opções, o programa demorou menos de 15 segundos, em média, para encontrar a solução ótima. \pause
 \item Isso se deve, principalmente, às otimizações existentes no pacote \emph{science-optimization} e no algoritmo \emph{Glop}.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Obrigado!}
+\begin{center}
+Obrigado pela atenção! Estou a postos para perguntas e comentários.
+\end{center}
 \end{frame}
 
 \end{document}
