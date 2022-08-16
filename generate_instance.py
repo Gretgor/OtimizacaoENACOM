@@ -16,13 +16,24 @@ budget = random.randint(30,1000*max(int(instance_size/8),1))
 print(instance_size)
 print(budget)
 
+# decide costs (between 1 and 600)
+costs = []
+returns = []
+for i in range(0,instance_size):
+	cost = random.randint(1,600)
+	# range for return: [0.8*cost,1.2*cost]
+	limitant = int((cost*20)/100)
+	curReturn = random.randint(cost-limitant,cost+limitant)
+	costs.append(cost)
+	returns.append(curReturn)
+
 # print costs (between 1 and 600)
 for i in range(0,instance_size):
-	print(random.randint(1,600))
+	print(costs[i])
 
 # print returns (between 1 and 800)	
 for i in range(0,instance_size):
-	print(random.randint(1,800))
+	print(returns[i])
 
 # name generation (just having fun with this one)
 for i in range(0,instance_size):
