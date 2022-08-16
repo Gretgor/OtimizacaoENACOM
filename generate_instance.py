@@ -16,6 +16,11 @@ if len(sys.argv) > 3:
 	dependency_size = int(sys.argv[3])
 else:
 	dependency_size = random.randint(0,int(instance_size/2))
+	
+# allowed percentage of variation between costs and returns (default 30)
+variation = 30
+if len(sys.argv) > 4:
+	variation = int(sys.argv[4])
 
 # budget is set to a random number between 30 and 1000*int(instance_size/8):
 budget = random.randint(30,1000*max(int(instance_size/8),1))
@@ -27,8 +32,8 @@ costs = []
 returns = []
 for i in range(0,instance_size):
 	cost = random.randint(1,600)
-	# range for return: [0.7*cost,1.3*cost]
-	limitant = int((cost*30)/100)
+	# range for return: from cost*(1-variation/100) to cost*(1+variation/100)
+	limitant = int((cost*variation)/100)
 	curReturn = random.randint(cost-limitant,cost+limitant)
 	costs.append(cost)
 	returns.append(curReturn)
