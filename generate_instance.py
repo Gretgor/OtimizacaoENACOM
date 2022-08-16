@@ -22,8 +22,8 @@ variation = 30
 if len(sys.argv) > 4:
 	variation = int(sys.argv[4])
 
-# budget is set to a random number between 30 and 1000*int(instance_size/8):
-budget = random.randint(30,1000*max(int(instance_size/8),1))
+# budget is set to a random number between 30 and 3000*int(instance_size/8):
+budget = random.randint(30,2000*max(int(instance_size/8),1))
 print(instance_size)
 print(budget)
 
