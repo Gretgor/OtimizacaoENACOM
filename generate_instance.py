@@ -5,11 +5,17 @@ import random
 # NUMBER OF INVESTMENT OPTIONS
 instance_size = int(sys.argv[1])
 
-# there will be at most n/2 conflicts in these test cases
-conflict_size = random.randint(0,int(instance_size/2))
+# conflict (is it an argument or is it random?)
+if len(sys.argv) > 2:
+	conflict_size = int(sys.argv[2])
+else:
+	conflict_size = random.randint(0,int(instance_size/2))
 
-# there will be at most n/2 dependencies in these test cases
-dependency_size = random.randint(0,int(instance_size/2))
+# dependencies (is it an argument or is it random?)
+if len(sys.argv) > 3:
+	dependency_size = int(sys.argv[3])
+else:
+	dependency_size = random.randint(0,int(instance_size/2))
 
 # budget is set to a random number between 30 and 1000*int(instance_size/8):
 budget = random.randint(30,1000*max(int(instance_size/8),1))
@@ -21,8 +27,8 @@ costs = []
 returns = []
 for i in range(0,instance_size):
 	cost = random.randint(1,600)
-	# range for return: [0.8*cost,1.2*cost]
-	limitant = int((cost*20)/100)
+	# range for return: [0.7*cost,1.3*cost]
+	limitant = int((cost*30)/100)
 	curReturn = random.randint(cost-limitant,cost+limitant)
 	costs.append(cost)
 	returns.append(curReturn)
@@ -31,7 +37,7 @@ for i in range(0,instance_size):
 for i in range(0,instance_size):
 	print(costs[i])
 
-# print returns (between 1 and 800)	
+# print returns
 for i in range(0,instance_size):
 	print(returns[i])
 
